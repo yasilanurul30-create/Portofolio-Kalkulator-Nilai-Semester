@@ -1,0 +1,111 @@
+/* 
+  Nama  : Nurul Yasilla
+  NIM   : 202432100
+  File  : tentang.css (Styles Khusus Halaman Tentang Saya)
+*/
+
+/* === HERO SECTION === */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-foto {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+  flex-shrink: 0;
+  background-color: var(--primary-light);
+}
+
+.hero-info h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.hero-info .nim-prodi {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.hero-info .bio {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* === SKILL TAGS === */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--white);
+  transition: transform 0.2s;
+}
+
+.skill-tag:hover {
+  transform: scale(1.05);
+}
+
+.tag-teal    { background-color: #0f766e; }
+.tag-blue    { background-color: #2563eb; }
+.tag-purple  { background-color: #7c3aed; }
+.tag-orange  { background-color: #ea580c; }
+.tag-pink    { background-color: #db2777; }
+
+/* === HARAPAN LIST === */
+.harapan-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.harapan-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.harapan-list li .dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.harapan-list li span {
+  color: var(--text);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 500px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-info h1 {
+    font-size: 1.2rem;
+  }
+
+  .skill-list {
+    justify-content: center;
+  }
+}

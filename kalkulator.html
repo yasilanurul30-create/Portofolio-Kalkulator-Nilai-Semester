@@ -1,0 +1,90 @@
+<!--
+  Nama  : Nurul Yasilla
+  NIM   : 202432100
+  File  : kalkulator.html (Halaman Kalkulator Nilai Semester)
+-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Nilai - Portofolio Mahasiswa</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="kalkulator.css" />
+</head>
+<body>
+
+  <!-- NAVIGASI -->
+  <nav>
+    <span class="nav-brand">Kalkulator Nilai Semester</span>
+    <ul class="nav-links">
+      <li><a href="index.html">Tentang Saya</a></li>
+      <li><a href="kalkulator.html" class="active">Kalkulator Nilai</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <!-- PESAN SAMBUTAN (ditampilkan via JS onload) -->
+    <div class="pesan-sambutan" id="pesanSambutan"></div>
+
+    <!-- KARTU KALKULATOR -->
+    <div class="card">
+      <h2>Kalkulator Nilai Akhir</h2>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">
+        Masukkan nilai tiap komponen untuk menghitung nilai akhir dan grade.
+      </p>
+
+      <!-- BOBOT PENILAIAN -->
+      <div class="bobot-wrapper">
+        <div class="bobot-item">
+          <div class="label-bobot">Tugas</div>
+          <div class="nilai-bobot">30%</div>
+        </div>
+        <div class="bobot-item">
+          <div class="label-bobot">UTS</div>
+          <div class="nilai-bobot">30%</div>
+        </div>
+        <div class="bobot-item">
+          <div class="label-bobot">UAS</div>
+          <div class="nilai-bobot">40%</div>
+        </div>
+      </div>
+
+      <!-- INPUT NILAI -->
+      <div class="form-group">
+        <label for="nilaiTugas">Nilai Tugas</label>
+        <input type="number" id="nilaiTugas" placeholder="Contoh: 85" min="0" max="100" />
+      </div>
+
+      <div class="form-group">
+        <label for="nilaiUTS">Nilai UTS</label>
+        <input type="number" id="nilaiUTS" placeholder="Contoh: 78" min="0" max="100" />
+      </div>
+
+      <div class="form-group">
+        <label for="nilaiUAS">Nilai UAS</label>
+        <input type="number" id="nilaiUAS" placeholder="Contoh: 80" min="0" max="100" />
+      </div>
+
+      <!-- TOMBOL -->
+      <button class="btn-hitung" id="btnHitung">Hitung</button>
+
+      <!-- PESAN ERROR -->
+      <div class="pesan-error" id="pesanError"></div>
+
+      <!-- HASIL -->
+      <div class="hasil-wrapper" id="hasilWrapper">
+        <div class="label-nilai">Nilai Akhir</div>
+        <div class="nilai-akhir" id="nilaiAkhirTampil"></div>
+        <div class="grade-label">Grade</div>
+        <div class="grade-value" id="gradeTampil"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="kalkulator.js"></script>
+</body>
+</html>
